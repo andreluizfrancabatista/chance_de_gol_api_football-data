@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance de Gol - Resultados de Futebol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">⚽ Chance de Gol</h1>
+            <p class="header-subtitle">Resultados e placares de futebol em tempo real</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Filtros -->
+            <section class="filters-section">
+                <div class="filters-card">
+                    <h2>Buscar Partidas</h2>
+                    
+                    <div class="filters-grid">
+                        <div class="filter-group">
+                            <label for="competition">Liga/Competição</label>
+                            <select id="competition" class="filter-select">
+                                <option value="">Selecionar Liga</option>
+                                <option value="PL">Premier League</option>
+                                <option value="PD">La Liga</option>
+                                <option value="BL1">Bundesliga</option>
+                                <option value="SA">Serie A</option>
+                                <option value="FL1">Ligue 1</option>
+                                <option value="CL">Champions League</option>
+                                <option value="BSA">Brasileirão</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="season">Temporada</label>
+                            <select id="season" class="filter-select">
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="status">Status</label>
+                            <select id="status" class="filter-select">
+                                <option value="FINISHED">Finalizadas</option>
+                                <option value="SCHEDULED">Programadas</option>
+                                <option value="IN_PLAY">Ao Vivo</option>
+                                <option value="">Todas</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="date">Data (opcional)</label>
+                            <input type="date" id="date" class="filter-input">
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="searchBtn" class="btn btn-primary">
+                            <span class="btn-text">Buscar Partidas</span>
+                            <span class="btn-loading" style="display: none;">
+                                <div class="spinner"></div>
+                            </span>
+                        </button>
+                        <button id="clearBtn" class="btn btn-secondary">Limpar Filtros</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats -->
+            <section class="stats-section" id="statsSection" style="display: none;">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMatches">0</div>
+                        <div class="stat-label">Partidas Encontradas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="finishedMatches">0</div>
+                        <div class="stat-label">Finalizadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="scheduledMatches">0</div>
+                        <div class="stat-label">Programadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgGoals">0.0</div>
+                        <div class="stat-label">Média de Gols</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mensagens -->
+            <section class="messages-section" id="messagesSection">
+                <div id="errorMessage" class="message message-error" style="display: none;">
+                    <div class="message-icon">⚠️</div>
+                    <div class="message-content">
+                        <strong>Erro:</strong>
+                        <span id="errorText"></span>
+                    </div>
+                </div>
+
+                <div id="infoMessage" class="message message-info" style="display: none;">
+                    <div class="message-icon">ℹ️</div>
+                    <div class="message-content">
+                        <span id="infoText"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resultados -->
+            <section class="results-section" id="resultsSection">
+                <div id="matchesContainer" class="matches-grid">
+                    <!-- Partidas serão inseridas aqui via JavaScript -->
+                </div>
+            </section>
+
+            <!-- Loading -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-card">
+                    <div class="loading-spinner"></div>
+                    <p>Buscando partidas...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Chance de Gol - Dados fornecidos por football-data.org</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="footballDataClient.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
