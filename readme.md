@@ -24,13 +24,13 @@ Uma aplicação web moderna e responsiva para consultar resultados e placares de
 - ✅ **Logs detalhados** para debug e monitoramento
 
 ### 🏆 Ligas Suportadas
-- **Premier League** 🏴󐁧󐁢󐁥󐁮󐁧󐁿 (PL) - Liga Inglesa
-- **La Liga** 🇪🇸 (PD) - Liga Espanhola  
-- **Bundesliga** 🇩🇪 (BL1) - Liga Alemã
-- **Serie A** 🇮🇹 (SA) - Liga Italiana
-- **Ligue 1** 🇫🇷 (FL1) - Liga Francesa
-- **Champions League** 🏆 (CL) - Liga dos Campeões
-- **Brasileirão** 🇧🇷 (BSA) - Campeonato Brasileiro
+- **Premier League**  (PL) - Liga Inglesa
+- **La Liga** (PD) - Liga Espanhola  
+- **Bundesliga** (BL1) - Liga Alemã
+- **Serie A** (SA) - Liga Italiana
+- **Ligue 1** (FL1) - Liga Francesa
+- **Champions League** (CL) - Liga dos Campeões
+- **Brasileirão** (BSA) - Campeonato Brasileiro
 
 ### 🔍 Filtros de Busca
 - **Liga/Competição**: Selecione entre as 7 ligas principais
@@ -106,15 +106,14 @@ python -m http.server 8080  # Pode ter limitações de CORS
 ```
 chance_de_gol_api_football-data/
 │
-├── 📄 index.html              # Interface principal
-├── 🎨 styles.css              # Estilos modernos e responsivos  
-├── ⚙️ app.js                  # Lógica da aplicação
-├── 🌐 footballDataClient.js   # Cliente da API com CORS corrigido
-├── 🔑 config.js              # Configurações do token
-├── 🚫 .gitignore             # Proteção de credenciais
-├── 📖 README.md              # Esta documentação
-│
-└── 🔧 proxy-server.js         # Servidor proxy (opcional)
+├── 📄 index.html               # Interface principal
+├── 🎨 styles.css               # Estilos modernos e responsivos  
+├── ⚙️ app.js                   # Lógica da aplicação
+├── 🌐 footballDataClient.js    # Cliente da API com CORS corrigido
+├── 🔑 config.js                # Configurações do token
+├── 🚫 .gitignore               # Proteção de credenciais
+├── 📖 README.md                # Esta documentação
+└── 🔧 proxy-server.js          # Servidor proxy (opcional)
 ```
 ## 📊 Limites da API (Plano Gratuito)
 
