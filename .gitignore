@@ -125,6 +125,7 @@ bower_components
 local/
 dev/
 development/
+prompt.txt
 
 # Testing
 test-results/
